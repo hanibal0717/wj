@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "35131874-4dd4-4799-94ef-dc3a6815e509",
+		"name": "WOONGJIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mbr",
+			"item": [
+				{
+					"name": "회원 전체조회 ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJtYnJJZCI6Ik1CUjIwMjAwOTIxMTYwMDAwMjY1IiwiaXNzIjoid2p0aGlua2JpZyIsImlhdCI6MTYwMTI3Mjk3MCwiZXhwIjoxNjAxMjc0NzcwfQ.2rF85V1NHqdeTr-lhXkkSh2f9vYFJdXLyAxUXI4B2i0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"srchTxt\" : \"\",\r\n    \"srchTy\" : \"\",\r\n    \"pagingYn\" : \"Y\",\r\n    \"currentPage\" : 1,\r\n    \"rowCnt\" : 20,\r\n    \"startSbsceYmd\" : \"\",\r\n    \"endSbsceYmd\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members?pagingYn=Y&currentPage= 1&rowCnt= 20&startSbsceYmd=2020-09&endSbsceYmd=2020-10&srchTy=ALL&srchTxt=김희석",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members"
+							],
+							"query": [
+								{
+									"key": "pagingYn",
+									"value": "Y"
+								},
+								{
+									"key": "currentPage",
+									"value": " 1"
+								},
+								{
+									"key": "rowCnt",
+									"value": " 20"
+								},
+								{
+									"key": "startSbsceYmd",
+									"value": "2020-09"
+								},
+								{
+									"key": "endSbsceYmd",
+									"value": "2020-10"
+								},
+								{
+									"key": "srchTy",
+									"value": "ALL"
+								},
+								{
+									"key": "srchTxt",
+									"value": "김희석"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "회원수 조회",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"srchTxt\" : \"$EN4Z00Gr@naver.com\",\r\n    \"srchTy\" : \"EMAIL\",\r\n    \"pagingYn\" : \"Y\",\r\n    \"currentPage\" : \"1\",\r\n    \"rowCnt\" : \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/cnt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"cnt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "특정회원조회 ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "특정 학습회원 조회 ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "신규회원등록",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b6e066cf-ba81-4fd7-8642-db5391e5aa3c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJtYnJJZCI6Ik1CUjIwMjAwOTIxMTYwMDAwMjY1IiwiaXNzIjoid2p0aGlua2JpZyIsImlhdCI6MTYwMTMzNzM3NSwiZXhwIjoxNjAxMzM5MTc1fQ.msF5sNmuMiSrFlbig8aG98PTakpwG2t4-VynkOYaz_Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailAdrs\": \"hanibal0928@abc.com\",\r\n  \"pw\": \"#Pp46863346\",\r\n  \"indvlInfoAgrmtYn\": \"Y\",\r\n  \"mbrAgrmtYn\": \"Y\",\r\n  \"mrktRcpYn\": \"Y\",\r\n  \"age14CnfmYn\": \"Y\",\r\n  \"mbrLrnList\": [\r\n    {\r\n      \"brthmt\": \"197407\",\r\n      \"mbrNm\": \"김희석\",\r\n      \"sxdnCd\": \"M\"\r\n    }\r\n  ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "학습회원등록",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brthmt\": \"200003\",\r\n  \"emotcSno\": 0,\r\n  \"mbrNm\": \"김하윤4\",\r\n  \"sbsceMbrId\": \"MBR20200921160000265\",\r\n  \"sxdnCd\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/sm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"sm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "가입회원 및 학습회원 일괄 삭제 ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "학습회원  개별삭제",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "학습회원 정보변경 ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"mbrId\" : \"LRN20200924100000060\",\r\n  \"emotcSno\": 4,\r\n  \"mbrNm\": \"김자바\",\r\n  \"sxdnCd\": \"W\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/sm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"sm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "가입회원 정보변경",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.e1yJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJpc3MiOiJ3anRoaW5rYmlnIiwiaWF0IjoxNjAxMDI0NDg2LCJleHAiOjE2MDEwMjYyODZ9.Nb7KwK5iafLv-8OmKEZPVUkgZnXj2LcXW2J3IjkLhO8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"pw\": \"#Dd46863346\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "이메일 인증",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "회원비밀번호 찾기",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/pw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"pw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "회원로그인",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailAdrs\": \"hanibal0717@naver.com\",\r\n  \"pw\": \"xiphkyam\",\r\n  \"rememberMe\": \"Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "암호화",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "common-code-controller : 공통 코드",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/code/STEP_CD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"code",
+								"STEP_CD"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "education",
+			"item": [
+				{
+					"name": "education-controller : 교육과정 관리 정보",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/education",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"education"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
