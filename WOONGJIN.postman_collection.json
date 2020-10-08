@@ -18,7 +18,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJtYnJJZCI6Ik1CUjIwMjAwOTIxMTYwMDAwMjY1IiwiaXNzIjoid2p0aGlua2JpZyIsImlhdCI6MTYwMTI3Mjk3MCwiZXhwIjoxNjAxMjc0NzcwfQ.2rF85V1NHqdeTr-lhXkkSh2f9vYFJdXLyAxUXI4B2i0",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJtYnIiOiJNQlIyMDIwMDkyMTE2MDAwMDI2NSIsImlzcyI6IndqdGhpbmtiaWciLCJpYXQiOjE2MDE5NzE2NzYsImV4cCI6MTYwMTk3MzQ3Nn0.y5Tn-7qNZ0zNyOfYLrOCE5pVXAdY3iHNltIsgc_PBko",
 								"type": "text"
 							}
 						],
@@ -32,10 +32,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/members?pagingYn=Y&currentPage= 1&rowCnt= 20&startSbsceYmd=2020-09&endSbsceYmd=2020-10&srchTy=ALL&srchTxt=김희석",
+							"raw": "http://21.123.6.198:8080/api/members?pagingYn=Y&rowCnt=10&currentPage=1&srchTy=ALL&srchTxt=&chnCd=&startSbsceYmd=2020-07&endSbsceYmd=2020-10",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"21",
+								"123",
+								"6",
+								"198"
 							],
 							"port": "8080",
 							"path": [
@@ -48,20 +51,12 @@
 									"value": "Y"
 								},
 								{
-									"key": "currentPage",
-									"value": " 1"
-								},
-								{
 									"key": "rowCnt",
-									"value": " 20"
+									"value": "10"
 								},
 								{
-									"key": "startSbsceYmd",
-									"value": "2020-09"
-								},
-								{
-									"key": "endSbsceYmd",
-									"value": "2020-10"
+									"key": "currentPage",
+									"value": "1"
 								},
 								{
 									"key": "srchTy",
@@ -69,41 +64,20 @@
 								},
 								{
 									"key": "srchTxt",
-									"value": "김희석"
+									"value": ""
+								},
+								{
+									"key": "chnCd",
+									"value": ""
+								},
+								{
+									"key": "startSbsceYmd",
+									"value": "2020-07"
+								},
+								{
+									"key": "endSbsceYmd",
+									"value": "2020-10"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "회원수 조회",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"srchTxt\" : \"$EN4Z00Gr@naver.com\",\r\n    \"srchTy\" : \"EMAIL\",\r\n    \"pagingYn\" : \"Y\",\r\n    \"currentPage\" : \"1\",\r\n    \"rowCnt\" : \"2\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/members/cnt",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"members",
-								"cnt"
 							]
 						}
 					},
@@ -151,12 +125,13 @@
 							{
 								"key": "Authorization",
 								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJtYnJJZCI6Ik1CUjIwMjAwOTIxMTYwMDAwMjY1IiwiaXNzIjoid2p0aGlua2JpZyIsImlhdCI6MTYwMTMzNzM3NSwiZXhwIjoxNjAxMzM5MTc1fQ.msF5sNmuMiSrFlbig8aG98PTakpwG2t4-VynkOYaz_Y",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"emailAdrs\": \"hanibal0928@abc.com\",\r\n  \"pw\": \"#Pp46863346\",\r\n  \"indvlInfoAgrmtYn\": \"Y\",\r\n  \"mbrAgrmtYn\": \"Y\",\r\n  \"mrktRcpYn\": \"Y\",\r\n  \"age14CnfmYn\": \"Y\",\r\n  \"mbrLrnList\": [\r\n    {\r\n      \"brthmt\": \"197407\",\r\n      \"mbrNm\": \"김희석\",\r\n      \"sxdnCd\": \"M\"\r\n    }\r\n  ]\r\n\r\n}",
+							"raw": "{\r\n  \"emailAdrs\": \"haniba1007@gmail.com\",\r\n  \"pw\": \"#Pp46863346\",\r\n  \"mbrLrnList\": [\r\n    {\r\n      \"brthmt\": \"197407\",\r\n      \"mbrNm\": \"이름1006\",\r\n      \"sxdnCd\": \"M\"\r\n    }\r\n  ],\r\n  \"mbrTermsList\" : [\r\n      {\r\n          \"termsId\" : \"TERMS01\",\r\n          \"agrmtYn\" : \"Y\"\r\n      },\r\n      {\r\n          \"termsId\" : \"TERMS02\",\r\n          \"agrmtYn\" : \"Y\"\r\n      },\r\n      {\r\n          \"termsId\" : \"TERMS03\",\r\n          \"agrmtYn\" : \"Y\"\r\n      },\r\n      {\r\n          \"termsId\" : \"TERMS04\",\r\n          \"agrmtYn\" : \"Y\"\r\n      }\r\n  ]\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,17 +195,6 @@
 					"response": []
 				},
 				{
-					"name": "학습회원  개별삭제",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": ""
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "학습회원 정보변경 ",
 					"request": {
 						"method": "PUT",
@@ -255,6 +219,43 @@
 								"api",
 								"members",
 								"sm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "학습회원 정보 수정  일괄처리",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIkRU40WjAwR3JAbmF2ZXIuY29tIiwiYXRoIjpbIlJPTEVfVVNFUiIsIlJPTEVfVVNFUiJdLCJtYnIiOiJNQlIyMDIwMDkyMTE2MDAwMDI2NSIsImlzcyI6IndqdGhpbmtiaWciLCJpYXQiOjE2MDIwMjY0NjAsImV4cCI6MTYwMjAyODI2MH0.1hBdAmFlem7JBc8VhCTCCoTdzj1e9czCn5NuePT4EQM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updateList\": \r\n    [\r\n        {\r\n            \"sbsceMbrId\" : \"MBR20200921160000265\",\r\n            \"mbrId\" : \"LRN20200929130000086\",\r\n            \"mbrNm\": \"자바end\",\r\n            \"sxdnCd\": \"F\"\r\n        },\r\n        {\r\n            \"sbsceMbrId\" : \"MBR20200921160000265\",\r\n            \"mbrId\" : \"LRN20200929130000099\",\r\n            \"mbrNm\": \"자바1023\",\r\n            \"sxdnCd\": \"M\"\r\n        }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/MBR20200921160000265/learners",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"MBR20200921160000265",
+								"learners"
 							]
 						}
 					},
@@ -296,12 +297,64 @@
 					"response": []
 				},
 				{
-					"name": "이메일 인증",
+					"name": "학습회원  개별삭제",
 					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzbTIwMjBtbmdyIiwiYXRoIjpbIlJPTEVfQURNSU4iLCJST0xFX1NNIl0sImlzcyI6IndqdGhpbmtiaWciLCJpYXQiOjE2MDE5NTY0NDMsImV4cCI6MTYwMTk1ODI0M30.hK41cJHkTOx3gX7e6wLjU6GHj8DiDY4wnCzePN_SNkc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/MBR20200929080000342/learners/LRN20200929080000074",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"MBR20200929080000342",
+								"learners",
+								"LRN20200929080000074"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "회원로그인",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailAdrs\": \"hanibal0717@naver.com\",\r\n  \"pw\": \"xiphkyam\",\r\n  \"rememberMe\": \"Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/members/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"members",
+								"signin"
+							]
 						}
 					},
 					"response": []
@@ -337,31 +390,12 @@
 					"response": []
 				},
 				{
-					"name": "회원로그인",
+					"name": "이메일 인증",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"emailAdrs\": \"hanibal0717@naver.com\",\r\n  \"pw\": \"xiphkyam\",\r\n  \"rememberMe\": \"Y\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/api/members/signin",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"members",
-								"signin"
-							]
+							"raw": ""
 						}
 					},
 					"response": []
@@ -437,6 +471,75 @@
 							"path": [
 								"api",
 								"education"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "acnt",
+			"item": [
+				{
+					"name": "관리자로그인",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mngtUserId\" : \"sm2020mngr\",\r\n    \"pw\": \"qkfhtpa!@#1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://21.123.6.198:8080/api/account/signin",
+							"protocol": "http",
+							"host": [
+								"21",
+								"123",
+								"6",
+								"198"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "terms",
+			"item": [
+				{
+					"name": "사용자 회원 가입 시 이용약관 리스트 정보 조회",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/terms/channels/BRS/language/KO",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"terms",
+								"channels",
+								"BRS",
+								"language",
+								"KO"
 							]
 						}
 					},
